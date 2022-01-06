@@ -1,10 +1,9 @@
-// This is just a test to see is Makefile setup
-
 #include <stdio.h>
 
-#include "tokens.h"
+#include "error.h"
 
 int main(int argc, char **argv) {
-    printf("Hello, World!\n%d\n", TOKEN);
+    ERROR err = makeErr("ShellError", "Invalid number of arguments", "Makefile",0, 0);
+    rawErr(err);
     return 0;
 }
